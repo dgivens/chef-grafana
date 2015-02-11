@@ -20,7 +20,7 @@ define(['settings'], function(Settings) {
         <% @datasources.each do |source,options| -%>
         '<%= source %>': {
         <% options.each do |option, value| -%>
-          <%= option %>: <%= value %>
+          <%= option %>: <%= value %><% unless options.keys.last == option -%>,<% end -%>
         <% end %>
         }<% unless @datasources.keys.last == source -%>,<% end -%>
         <% end %>
@@ -62,6 +62,5 @@ define(['settings'], function(Settings) {
         // for example custom datasources
         dependencies: [],
       }
-
     });
 });
