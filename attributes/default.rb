@@ -10,11 +10,11 @@ default['grafana']['elasticsearch_url'] = '"http://"+window.location.hostname+":
 default['grafana']['datasources'] = {
   'graphite' => {
     'type' => "'graphite'",
-    'url' => '"http://"+window.location.hostname+":8080""'
+    'url' => '"http://"+window.location.hostname+"/graphite"'
   },
   'elasticsearch' => {
     'type' => "'elasticsearch'",
-    'url' => '"http://"+window.location.hostname+":9200"',
+    'url' => '"http://"+window.location.hostname+"/"',
     'index' => "'grafana-dash'",
     'grafanaDB' => 'true'
   }
